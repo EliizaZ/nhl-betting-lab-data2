@@ -25,10 +25,26 @@ teamA = col1.selectbox("🏒 Away komanda", teams)
 teamB = col2.selectbox("🏠 Home komanda", teams)
 
 # ======= USER INPUT: BOOK ODDS =======
+# ======= USER INPUT: BOOK ODDS =======
 st.subheader("💰 Bukmeikeru koeficienti")
 col1, col2 = st.columns(2)
-ml_away = col1.number_input(f"{teamA} ML", min_value=1.01, step=0.01, value=2.00)
-ml_home = col2.number_input(f"{teamB} ML", min_value=1.01, step=0.01, value=2.00)
+
+ml_away = col1.number_input(
+    f"{teamA} ML",
+    min_value=1.01,
+    step=0.01,
+    value=2.00,
+    key=f"ml_away_{teamA}"
+)
+
+ml_home = col2.number_input(
+    f"{teamB} ML",
+    min_value=1.01,
+    step=0.01,
+    value=2.00,
+    key=f"ml_home_{teamB}"
+)
+
 
 # ======= MODEL: FAIR ODDS =======
 
