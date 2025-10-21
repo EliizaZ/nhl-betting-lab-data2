@@ -1,0 +1,31 @@
+APP_TITLE = "NHL Betting Lab — v3.3 (spins.lv)"
+API_BASE = "https://statsapi.web.nhl.com/api/v1"
+
+CACHE_TTL_SHORT = 600
+CACHE_TTL_LONG = 3600
+CACHE_TTL_DAY = 86400
+
+# Model weights
+HOME_EDGE_GOALS = 0.15
+WEIGHT_SEASON = 0.5
+WEIGHT_FORM = 0.25
+WEIGHT_XG = 0.25
+GOALIE_BACKUP_PENALTY = 0.3
+B2B_PENALTY = 0.15
+INJURY_IMPACT_PER_PPG = 0.08
+
+DB_PATH = "lab.sqlite"
+
+# Odds API
+ODDSAPI_KEY_ENV = "ODDS_API_KEY"
+ODDS_REGIONS = "eu"
+ODDS_MARKETS = ["h2h"]
+ODDS_SPORT_KEY = "icehockey_nhl"
+PREFERRED_BOOKS = ["spins.lv", "spins", "betsson", "optibet", "pinnacle", "bet365"]
+
+# Telegram
+TELEGRAM_BOT_TOKEN_ENV = "TELEGRAM_BOT_TOKEN"
+TELEGRAM_CHAT_ID_ENV = "TELEGRAM_CHAT_ID"
+TELEGRAM_ALERT_THRESHOLD = 0.07
+VALUE_ALERT_THRESHOLD = 0.05
+
